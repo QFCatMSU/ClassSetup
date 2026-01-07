@@ -1,5 +1,6 @@
 ---
-title: "01b: Git and GitHub Setup"
+title: "01c: Git and GitHub Setup"
+short: "01c"
 # special characters for highlighting code : «»
 ---
 
