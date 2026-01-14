@@ -1,26 +1,20 @@
 ---
-title: "01b: RStudio Projects Setup"
-short: "01b"
+title: "01a: RStudio Projects Setup"
+short: "01a"
 # special characters for highlighting code : «»
-# Assets used in this lesson are:
-# - images/RSProj_*.*
-# - data/RSProj_Setup.csv
-# - scripts/RSProj_Setup.R
 ---
 
 ### To do
 
--   Include checklist
-
 ## Purpose
 
--   Install and test the software you will need for this class
+-   Install, setup, and test the software you will need for this class
 
--   Provide a basic overview of how RStudio works and its relationship to R
+-   View hidden files and file extensions
 
--   Execute, using the Source button, an R script
+-   Provide a basic overview of the RStudio environment
 
--   Show how commenting works and the importance of commenting
+-   Execute an R script using the Source button
 
 ### Special note about images in the lessons for this class
 
@@ -36,11 +30,11 @@ By default, Windows and Mac hides file extensions from you (e.g., your Word docu
 
  
 
-Also, when you are programming, there are files you will need to access that are hidden by default by the operating system.
+Also, when you are programming, there are files you will need to access that are hidden by default in the operating system.
 
  
 
-This section is optional, but I would highly recommend you learn how to view all files and file extensions -- it will greatly assist you when programming.
+This section is optional, but I would highly recommend you learn how to view all hidden files and file extensions -- it will greatly assist you when programming.
 
 ### Viewing in newer versions of Windows 11
 
@@ -52,7 +46,7 @@ This is easy to to do in newer versions of Windows 11:
 
 -   Check ***File name extensions*** and ***Hidden items***
 
-![Change settings to view all file extensions on Windows 11](images/RSProj_FileExtensions_Win11.png){#fig-win11 .fs}
+![Change settings to view all file extensions on Windows 11](images/RSProj_FileExtensions_Win11.png){#fig-win11 .fs alt="Change settings to view all file extensions on Windows 11"}
 
 ### Viewing in Windows 10 and older Windows 11 versions
 
@@ -76,7 +70,7 @@ This feature is a bit buried in these Window versions.
 
 -   Click ***OK***
 
-![Viewing in older versions of Windows](images/RSProj_FileExtensions1.png){#fig-fileExt .fs}
+![Viewing in older versions of Windows](images/RSProj_FileExtensions1.png){#fig-fileExt .fs alt="Viewing in older versions of Windows"}
 
 ### Viewing in Mac
 
@@ -98,7 +92,7 @@ Hidden files:
 
 -   You can use the Terminal to permanently show hidden files as [described on this webpage](https://techstacker.com/how-to-always-show-hidden-files-finder-macos/) but this is not recommended unless you are comfortable with Terminal commands.
 
-![Change settings to view all file extensions on a Mac](images/RSProj_FileExtensionsMac.png){#fig-fileExtMac .fs}
+![Change settings to view all file extensions on a Mac](images/RSProj_FileExtensionsMac.png){#fig-fileExtMac .fs alt="Change settings to view all file extensions on a Mac"}
 
 ## Install R and RStudio on your computer
 
@@ -106,7 +100,7 @@ We are going to install **R** and **RStudio** on your computer. R is a programmi
 
  
 
-On Windows the default installation can be used for R and RStudio. For Mac, installation is a bit trickier – details below.
+On Windows, R and RStudio installation is straightforward and you can use the default settings. For Macs the installation is a bit trickier, the details are below.
 
  
 
@@ -132,7 +126,7 @@ And for those of you using Linux -- the [R for Linux download instructions are 
 
 ### Install or update RStudio
 
-You need version **2023.12** or higher for this class and you should have **2025.04** or higher if you are using Git.
+It is highly recommended that you have version **2025.04** or higher.
 
  
 
@@ -147,14 +141,14 @@ For Mac users there are some extra complexities:
 
 2.  The download for RStudio is called ***RStudio-202X.XX.dmg***.  Double-clicking the file will open the window below (@fig-DMGFile).  In the window, drag the RStudio file to the Applications folder
 
-![Opening RStudio DMG file](images/RSProj_MacDmgApp.png){#fig-DMGFile .fs}
+![Opening RStudio DMG file](images/RSProj_MacDmgApp.png){#fig-DMGFile .fs alt="Opening RStudio DMG file"}
 
 If you already have RStudio installed, you will be asked if you want to replace the old version -- go ahead and ***Replace*** it.\
  
 
 3.  After installation, ***unmount*** the RStudio device in the ***Finder*** by clicking the eject button (@fig-unmount)
 
-![Unmounting the RStudio device (very important!)](images/RSProj_MacUnmount.png){#fig-unmount .fs}
+![Unmounting the RStudio device (very important!)](images/RSProj_MacUnmount.png){#fig-unmount .fs alt="Unmounting the RStudio device (very important!)"}
 
 ## Installing a package
 
@@ -172,7 +166,7 @@ To install the package ***GGPlot2*** using RStudio (@fig-ggplot2):
 
 ***GGPlot2*** requires many other packages (its dependencies) -- and RStudio will install those packages along with GGPlot2.  Be patient, as this could take a little time.
 
-![Installing the GGPlot2 Package in RStudio](images/RSProj_InstallPackages.png){#fig-ggplot2 .fs}
+![Installing the GGPlot2 Package in RStudio](images/RSProj_InstallPackages.png){#fig-ggplot2 .fs alt="Installing the GGPlot2 Package in RStudio"}
 
  
 
@@ -198,7 +192,7 @@ To create a new RStudio Project, which is also your project folder:
 
 -   In the ***Project Type*** window click ***New Project***
 
-![Creating a new RStudio Project](images/RSProj_RStudioNewProj.png){#fig-newRStudioProject .fs}
+![Creating a new RStudio Project](images/RSProj_RStudioNewProj.png){#fig-newRStudioProject .fs alt="Creating a new RStudio Project"}
 
  
 
@@ -212,7 +206,7 @@ In the ***Create New Project*** window:
 
 In @fig-projectDir, the Project Folder is named ***My_Project*** and is in the ***Desktop*** folder.  [Note: you can name the folder whatever you want and put it in any folder location.]{.note}
 
-![Creating a directory for the RStudio Project](images/RSProj_RStudioProjectDirectory.png){#fig-projectDir .fs}
+![Creating a directory for the RStudio Project](images/RSProj_RStudioProjectDirectory.png){#fig-projectDir .fs alt="Creating a directory for the RStudio Project"}
 
  
 
@@ -226,7 +220,7 @@ In @fig-projectDir, the Project Folder is named ***My_Project*** and is in the *
 
 Whenever you create an RStudio Project, an ***.Rproj*** file is added to the Project Folder. This main purpose of this file is to designate this folder as the working directory for your project.  Double-clicking on the ***.Rproj*** file in your File Manager will open your Project in RStudio (just like double-clicking a ***.docx*** file opens the file in Word).
 
-![Files tab opened to the Project Folder](images/RSProj_RStudioInitFiles.png){#fig-filesTab .fs}
+![Files tab opened to the Project Folder](images/RSProj_RStudioInitFiles.png){#fig-filesTab .fs alt="Files tab opened to the Project Folder"}
 
 ### Viewing hidden files in RStudio
 
@@ -234,7 +228,7 @@ By default, the ***Files*** tab shows file extension but it does not show hidden
 
  
 
-![Showing hidden files](images/RSProj_HiddenFiles.png){#fig-hiddenFiles .fs}
+![Showing hidden files](images/RSProj_HiddenFiles.png){#fig-hiddenFiles .fs alt="Showing hidden files"}
 
 [Extension: \*.RProj and .Rhistory](#extension-.rproj-and-.rhistory-hidden-files-in-your-project-folder)
 
@@ -252,7 +246,7 @@ To add two folders named ***scripts*** and ***data***:
 
 -   Repeat the last two steps to add a folder called ***data***
 
-![Adding folders using the Files tab in RStudio](images/RSProj_AddFolders.png){#fig-addFolders .fs}
+![Adding folders using the Files tab in RStudio](images/RSProj_AddFolders.png){#fig-addFolders .fs alt="Adding folders using the Files tab in RStudio"}
 
 ### Add files to the project
 
@@ -270,13 +264,13 @@ The ***Files*** tab can do a lot of things that File Explorer/Finder can do -- b
 
 You can open up a File Explorer/Finder window to the same folder by clicking ***More... -\> Show Folder in New Window***.
 
-![The Files tab in RStudio and the File Manager](images/RSProj_ShowFolderInNewWindow.png){#fig-fileExplorers .fs}
+![The Files tab in RStudio and the File Manager](images/RSProj_ShowFolderInNewWindow.png){#fig-fileExplorers .fs alt="The Files tab in RStudio and the File Manager"}
 
 ### RStudio Project File Manager
 
 You should now be running RStudio, opened to the RStudio Project that you just created.  If you click on the ***Files*** tab in the lower-right corner, you will see all the folders and files within your RStudio Project (linked to your Project Folder). You will also see your project name in the upper-right corner (in this case, ***My_Project***).
 
-![RStudio opened with an RStudio Project (named My_Project)](images/RSProj_OpenedProjectFolder.png){#fig-fileWindows .fs}
+![RStudio opened with an RStudio Project (named My_Project)](images/RSProj_OpenedProjectFolder.png){#fig-fileWindows .fs alt="RStudio opened with an RStudio Project (named My_Project)"}
 
 The ***\*.RProj*** files is here and you might also see a file named ***.RHistory***. These are not files you will need to use right away but you can learn more about them at [Extension: \*.RProj and .Rhistory](#extension-.rproj-and-.rhistory-hidden-files-in-your-project-folder).
 
@@ -290,7 +284,7 @@ Now we are going to execute the script file, ***RSProj_Setup.R***, that we just 
 
  
 
-We are executing the script to test your setup and help you become familiar with the RStudio environment. If you are taking the GGPlot class, the code in ***RSProj_Setup.R*** is something you will learn throughout the course. For this lesson,
+For now, we are executing the script to test your setup and help you become familiar with the RStudio environment. The code in this script is something you will learn as the class progresses.
 
 ### Open your RStudio Project
 
@@ -314,29 +308,25 @@ To open the script file either:
 
 After opening the script file, you should see something that looks like this (@fig-openScript) on your screen:
 
-![Opening your first script in RStudio](images/RSProj_FirstScript.png){#fig-openScript .fs}
+![Opening your first script in RStudio](images/RSProj_FirstScript.png){#fig-openScript .fs alt="Opening your first script in RStudio"}
 
-The script will only execute if [it is opened inside your RStudio Project]{.hl}.
+The script will only execute properly if [it is opened inside your RStudio Project]{.hl}.
 
 ### Setting up RStudio tabs for scripts
 
-When we are editing and executing an R script, we generally have the following RStudio tabs open (@fig-tabs):
+When we are editing and executing an R script, we generally have the following RStudio tabs open (@fig-openScript):
 
-1.  **File Viewer** -- text viewer and editor for the opened script files (upper-left corner)
+1.  **File Editor** – text viewer and editor for the opened script files (upper-left pane)
 
-2.  **Console** -- displays information about the execution of your script file (lower-left corner)
+2.  **Console** – displays information about the execution of your script file (lower-left pane)
 
-3.  **Environment** -- displays data points, or variables, from the execution of your script file (upper-right corner)
+3.  **Environment** – displays data points, or variables, from the execution of your script file (upper-right pane)
 
-4.  **Plots** -- plots produced by the execution of your script file are displayed here (lower-right corner)
+4.  **Files** – the file manager (lower-right pane)
 
- 
+    -   After execution of this script, this will switch to **Plots** (@fig-source) – all plots created by the scrtipt are displayed here
 
-The fourth (lower-right corner) tab is on ***Files***, so we switched the tab to ***Plots***:
-
-![The Tabs most commonly used in RStudio](images/RSProj_RStudioTabs.png){#fig-tabs .fs}
-
- 
+     
 
 [Note: the **Help** tab in the lower-right corner is something you might find useful.]{.note} [Extension: The Help Tab]
 
@@ -350,25 +340,25 @@ The one button you will use most in R is ***Source***, which executes your whole
 
  
 
-[Note: If you have already used R, there is a good chance you highlight lines of code and click **Run** to execute just those lines.  We are not using this method in this class.  For this class, you should always use **Source** to execute your code.]{.note}  For more information go to [Extension: Run vs. Source]
+[Note: If you have already used R, there is a good chance you highlight lines of code and click **Run** to execute just those lines. This is fine but, in this class, your code must work when executed using **Source**.]{.note}  For more information go to [Extension: Run vs. Source]
 
-![Running (Sourcing) the script](images/RSProj_Source.png){#fig-source .fs}
+![Executing the whole the script (Source)](images/RSProj_Source.png){#fig-source .fs alt="Executing the whole the script (Source)"}
 
 After the script is run:
 
--   The **Environment** tab displays values for the data (variables) in the script (e.g., ***weatherData***, ***windLabels***).
+-   The **Environment** tab displays values for the data (variables) in the script (e.g., ***weatherData***, ***windLabels***).
 
--   The **Console** tab displays information about the execution of the script.
+-   The **Console** tab displays information about the execution of the script.
 
--   The **Plot** tab displays the box plots.  If there are multiple plots, you can use the arrow buttons to switch between the plots.
+-   The **Plot** tab displays the box plots. If there are multiple plots, you can use the arrow buttons to switch between the plots.
 
-### Cleaning up the RStudio windows
+### Cleaning up the RStudio panes
 
-There many times where you want to clean up the windows, which can get very crowded with information from old script executions.
+There many times where you want to clean up the panes, which can get very crowded with information from old script executions.
 
--   To clean the **Environment,** **Plot**, and **Console** tabs use the brush button (@fig-source).
+-   To clean the **Environment,** **Plot**, and **Console** panes, use the brush button (@fig-cleanTabs).
 
-![Cleaning out the windows](images/RSProj_CleanWindows.png){#fig-cleanTabs .fs}
+![Cleaning out the panes](images/RSProj_CleanWindows.png){#fig-cleanTabs .fs alt="Cleaning out the panes"}
 
  
 
@@ -382,7 +372,7 @@ If you click ***Source*** again, the **Environment, Plot,** and **Console** tabs
 
 3.  Change the colors in the boxplot (edit lines 17-21)
 
-    -   Here is a [comprehensive list of color names](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf) you can use in R
+    -   Here is a [comprehensive list of color names](images/rcolornames.pdf) you can use in R
 
 4.  Save the script as ***app01.r***, and to your ***script*** folder
 
@@ -412,7 +402,7 @@ For all operating systems, a zipped file named ***\<Project Folder\>.zip*** with
 
 I am not a big fan of the default color scheme in RStudio.  It does not create enough differentiation between the different components of a script.  For instance, comments (red arrows) are in green and quoted items (blue arrows) are in just a slightly different green (@fig-colors).
 
-![The text color for comments and quotes](images/RSProj_CommentsVsQuotes.png){#fig-colors .fs}
+![The text color for comments and quotes](images/RSProj_CommentsVsQuotes.png){#fig-colors .fs alt="The text color for comments and quotes"}
 
 ### Changing the color scheme
 
@@ -428,7 +418,7 @@ RStudio offers many color schemes -- you can change the color scheme by:
 
 3.  When the ***Global Options*** window open (in @fig-colorSchemes), click on ***Appearance***
 
-![Color schemes for RStudio (note: the Editor font might be different in your window -- that is OK)](images/RSProj_ColorScheme.png){#fig-colorSchemes .fs}
+![Color schemes for RStudio (note: the Editor font might be different in your window -- that is OK)](images/RSProj_ColorScheme.png){#fig-colorSchemes .fs alt="Color schemes for RStudio (note: the Editor font might be different in your window -- that is OK)"}
 
  
 
@@ -456,7 +446,7 @@ To make these changes go to
 
 -   [Show syntax highlighting in console input]{.hl}
 
-![Console Window changes](images/RSProj_ConsoleWindow-01.png){#fig-consoleChanges .fs}
+![Console Window changes](images/RSProj_ConsoleWindow-01.png){#fig-consoleChanges .fs alt="Console Window changes"}
 
 ## Extension: Stop RStudio from automatically adding matching parenthesis and quotes
 
@@ -472,7 +462,7 @@ You can turn off this feature by:
 
 -   set **Surround selection on text insertion** to ***Never***
 
-![Stop RStudio from automatically ending your parenthesis and quotes.](images/RSProj_EndParensQuotes.png){#fig-stopAutoInsert .fs}
+![Stop RStudio from automatically ending your parenthesis and quotes.](images/RSProj_EndParensQuotes.png){#fig-stopAutoInsert .fs alt="Stop RStudio from automatically ending your parenthesis and quotes."}
 
 ## Extension: RStudio Project in an existing directory {data-link="Extension: RStudio Project in an existing directory"}
 
@@ -564,19 +554,19 @@ install.packages(c("GGPlot2", "gridExtra", "tidyverse")
 
 The ***Console*** tab in RStudio is an R interface, and you could type in the above line to install the ***GGPlot2*** package.
 
-![Using the RStudio Console to install a package](images/RSProj_UsingConsole.png){#fig-packageInstallation .fs}
+![Using the RStudio Console to install a package](images/RSProj_UsingConsole.png){#fig-packageInstallation .fs alt="Using the RStudio Console to install a package"}
 
 ### Have RStudio install the packages
 
 RStudio looks through your script and will prompt you to install packages used in your script that you do not have installed. With a click, RStudio installs all needed packages and dependencies.
 
-![RStudio looking for packages needed by the script-- click Install and RStudio installs the required package(s)](images/RSProj_InstallPackages.png){#fig-RStudioInstall .fs}
+![RStudio looking for packages needed by the script-- click Install and RStudio installs the required package(s)](images/RSProj_InstallPackages.png){#fig-RStudioInstall .fs alt="RStudio looking for packages needed by the script-- click Install and RStudio installs the required package(s)"}
 
 ## Extension: The Help tab {data-link="Extension: The Help Tab"}
 
 The ***Help*** tab is essentially an intelligent online search through the R documentation.  So, if you type **plot** in the search bar and hit enter, the R plot help page from the online documentation will appear.  [Note: you could have done the same thing by typing **?plot** in the **Console** tab**.**]{.hl}
 
-![The R plot help page in the online documentation.](images/RSProj_HelpWindow.png){#fig-helpTab .fs}
+![The R plot help page in the online documentation.](images/RSProj_HelpWindow.png){#fig-helpTab .fs alt="The R plot help page in the online documentation."}
 
  
 

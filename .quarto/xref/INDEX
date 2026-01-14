@@ -4,5 +4,17 @@
   },
   "lessons/01b-GitAndGitHubSetup.qmd": {
     "01b-GitAndGitHubSetup.html": "329e9a71"
+  },
+  "lessons/01b-RStudioProjectsSetup.qmd": {
+    "01b-RStudioProjectsSetup.html": "1e2510e0"
+  },
+  "lessons/01c-GitAndGitHubSetup.qmd": {
+    "01c-GitAndGitHubSetup.html": "0f6ce6b3"
+  },
+  "lessons/01d-GitAndGitHubSetup.qmd": {
+    "01d-GitAndGitHubSetup.html": "72e1a736"
+  },
+  "lessons/01b(alt)-GitOnlySetup.qmd": {
+    "01b(alt)-GitOnlySetup.html": "c51b444e"
   }
 }

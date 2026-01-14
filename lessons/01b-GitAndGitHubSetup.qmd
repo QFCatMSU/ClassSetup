@@ -1,18 +1,18 @@
 ---
-title: "01c: Git and GitHub Setup"
-short: "01c"
+title: "01b: Git and GitHub Setup"
+short: "01b"
 # special characters for highlighting code : «»
 ---
 
 ### To-dos
 
--   Add instructions to replace section 7 for when the instructors provides the GitHub URL
-
 ## Purpose
 
 -   Setup Git on your computer
 
--   Use Git to connect your RStudio Project to a GitHub repository
+-   Create a GitHub repository for your class project
+
+-   Use Git to connect your RStudio Project to the GitHub repository
 
 -   Share your GitHub repository
 
@@ -34,7 +34,7 @@ For this class, we will use Git and GitHub for your class assignments.
 
  
 
-While Git and GitHub are very powerful tools, they are not intuitive and there is a pretty high-barrier to getting started. This lesson is designed to allow you to do the very basics in Git and GitHub.
+While Git and GitHub are very powerful tools, they are not intuitive and there is a pretty high-barrier to getting started. This lesson is designed to allow you to do the very basics in Git and GitHub, which is all you will need for this class.
 
 ## Install Git on your computer (need version 2.44 or higher)
 
@@ -42,7 +42,7 @@ For ***Windows***, [go here to download and install Git](https://git-scm.com/dow
 
  
 
-For ***Mac***, [there is no direct installation of Git]{.hl}. I recommend using **Homebrew**, which is a useful tool for any programmer using a Mac because it gives you access to a bunch of programming tools.
+For ***Mac***, [there is no direct installation of Git](https://git-scm.com/install/mac). I recommend using **Homebrew**, which is a useful tool for any programmer using a Mac because it gives you access to a bunch of programming tools.
 
 ### Homebrew installation of Git on Mac:
 
@@ -78,15 +78,11 @@ We will be using the ***Terminal*** tab in RStudio to setup Git and to connect y
 
 Most of the Terminal command used in this lesson will only work if you are in the correct RStudio Project. The RStudio Project name (in @fig-RStudioTermProj it is ***My_Project***) is in the upper-right corner of RStudio (circled in red).
 
-![RStudio Terminal tab (don't forget to check the Project Folder)](images/RStudioTerminalAndProject.png){#fig-RStudioTermProj .fs}
+![RStudio Terminal tab (don't forget to check the Project Folder)](images/RStudioTerminalAndProject.png){#fig-RStudioTermProj .fs alt="RStudio Terminal tab (don't forget to check the Project Folder)"}
 
 ## Configuring Git on your computer
 
 Before you use Git, you first need to configure Git on your computer with your GitHub username and email (i.e., the email you use to sign up for your GitHub account). The username and email are used by Git to identify who made what changes in the project history – this is especially important when you are collaborating on a project.
-
- 
-
-[Git will not check if you put in a wrong or invalid username or email]{.hl}.
 
 ### Adding the username and email
 
@@ -106,25 +102,21 @@ The second command sets the user ***email*** in Git (replace ***email*** with th
 git config --global user.email "email"
 ```
 
-![Changing Git username and email using the Terminal tab](images/GH_EmailAndUsername.png){#fig-terminalTab .fs}
+![Changing Git username and email using the Terminal tab](images/GH_EmailAndUsername.png){#fig-terminalTab .fs alt="Changing Git username and email using the Terminal tab"}
 
 ### Viewing the configured values
 
-You can check if you successfully changed the username and email by executing these lines in the ***Terminal*** tab:
+Git will not check your ***user.name*** and ***user.email*** are valid. You can check if you successfully changed the username and email by executing these lines in the ***Terminal*** tab:
 
 ``` {.bash tab="Terminal"}
-git config user.name 
-git config user.email
+git config user.name  git config user.email
 ```
 
-After executing the two above command, [your **Terminal** tab should look similar]{.hl} to this:
+After executing the two above command, your **Terminal** tab should look similar to this:
 
 ::: {#fig-testGitConfig}
 ``` {.bash tab="Terminal"}
-$ git config user.name 
-belinskyc  
-$ git config user.email 
-belinsky@msu.edu
+$ git config user.name  belinskyc   $ git config user.email  belinsky@msu.edu
 ```
 
 Testing the git configuration using the RStudio Terminal tab
@@ -152,9 +144,9 @@ Both RStudio Projects and Git Repositories are set up in your Project Folder (i.
 
 ### RStudio Git tab
 
-After you add Git to an RStudio Project folder, a ***Git*** tab will appear in the upper-right window. This tab is RStudio's built-in Git interface and it can handle many commonly performed Git functions, including most of the things needed for class. It is not necessary to use the ***Git*** tab.
+After you add Git to an RStudio Project folder, a ***Git*** tab will appear in the upper-right window. This tab is RStudio's built-in Git interface and it can handle many commonly performed Git functions, including most of the things needed for class. It is not necessary to use the ***Git*** tab for this class.
 
-![The Git tab has been added to the RStudio Project](images/GH_02_GitTab.png){#fig-GitTab .fs}
+![The Git tab has been added to the RStudio Project](images/GH_02_GitTab.png){#fig-GitTab .fs alt="The Git tab has been added to the RStudio Project"}
 
 ## Create a GitHub repository
 
@@ -173,22 +165,22 @@ To create a GitHub repository (@fig-GitURL)
     -   ***Private*** means that only users you add in ***Settings -\> Manage Access*** can view the repository
 5.  Click ***Create Repository***
 
-![Creating a new repository on GitHub](images/GH_CreateRepo.png){#fig-GitURL .fs}
+![Creating a new repository on GitHub](images/GH_CreateRepo.png){#fig-GitURL .fs alt="Creating a new repository on GitHub"}
 
 ### Get the GitHub URL
 
 To link the Git repository on your computer with this GitHub repository, you will need the URL for the GitHub repository. After you create the new repository, a window will appear ( @fig-GitHubURL) with the URL at the top in the ***Quick Setup*** section. [Copy this URL and save it]{.hl}-- you will use it in the next section.
 
-![The URL of your GitHub repository](images/GH_RepoUrl.png){#fig-GitHubURL .fs}
+![The URL of your GitHub repository](images/GH_RepoUrl.png){#fig-GitHubURL .fs alt="The URL of your GitHub repository"}
 
 The GitHub repository link is the URL that takes you directly to the online project.  A GitHub repository link is always in this format:
 
 `https://github.com/<github_user_name>/<github_repository_name>.git`**\
 **
 
-So, if my GitHub username is ***QFCatMSU*** and my repository name is ***gitHubTest*** then the link is:
+So, if my GitHub username is ***belinskyc*** and my repository name is ***gitHubTest*** then the link is:
 
-`https://github.com/qfcatmsu/githubtest.git`
+`https://github.com/belinskyc/githubtest.git`
 
 [Note: capital/lowercase does not matter and .git is optional]{.note}
 
@@ -210,7 +202,7 @@ To invite a user (or, as GitHub calls them, ***collaborator***) to your reposito
 
     -   invite your instructor: ***belinsky\@msu.edu*** or ***belinskyc***
 
-![Inviting a user to your GitHub Repository](images/GH_AddUser.png){#fig-invite .fs}
+![Inviting a user to your GitHub Repository](images/GH_AddUser.png){#fig-invite .fs alt="Inviting a user to your GitHub Repository"}
 
 ## Linking your Git repository to a GitHub repository
 
@@ -251,9 +243,7 @@ Git/GitHub is asynchronous. [Changes to your local project are not automatically
 To upload your changes to GitHub, in the ***Terminal*** type:
 
 ``` bash
-git add -A
-git commit -m "A message about the changes to your project"
-git push -u origin main
+git add -A git commit -m "A message about the changes to your project" git push -u origin main
 ```
 
 You will repeat these lines every time you turn in an application.
@@ -274,7 +264,7 @@ You will repeat these lines every time you turn in an application.
 
 GitHub will ask for authentication [the first time you connect to a GitHub repository]{.hl} on a computer:
 
-![GitHub asking for authentication](images/GitHubLogin-new.png){#fig-GitHubAuth .fs}
+![GitHub asking for authentication](images/GitHubLogin-new.png){#fig-GitHubAuth .fs alt="GitHub asking for authentication"}
 
 When you click ***Sign in with your browser***, your default browser will open to the GitHub login page.
 
@@ -282,7 +272,7 @@ When you click ***Sign in with your browser***, your default browser will open t
 
 After you login you will get an Authentication Successful window:
 
-![The Authentication Successful window](images/GH_Repo_AuthSuccess.jpg){#fig-authSuccess .fs}
+![The Authentication Successful window](images/GH_Repo_AuthSuccess.jpg){#fig-authSuccess .fs alt="The Authentication Successful window"}
 
 ## Verifying the change on GitHub
 
@@ -300,7 +290,7 @@ Let's go to your GitHub account to verify that the project files are there (@fig
 
 You should notice that the files changed in the newest Commit have your Commit message attached (my Commit message: "A message about...") and the last commit for these files is recent (in this case: 9 minutes). 
 
-![GitHub after a new Commit was pushed](images/GH_First%20Push.png){#fig-GitHubPostCommit .fs}
+![GitHub after a new Commit was pushed](images/GH_First%20Push.png){#fig-GitHubPostCommit .fs alt="GitHub after a new Commit was pushed"}
 
 ## Application
 
@@ -309,9 +299,7 @@ A\) Append to the top of your ***app01.r*** the [Questions to answer] for this l
 B\) Send the change to GitHub by executing these lines in the ***Terminal***:
 
 ``` bash
-git add -A
-git commit -m "Finished lesson 1b application"
-git push -u origin main
+git add -A git commit -m "Finished lesson 1b application" git push -u origin main
 ```
 
 [Note: after the first push, the third line can be reduced to `git push`]{.note}
@@ -323,7 +311,7 @@ Alternatively, you can use the Git tab: [Extension: Use Git Tab]
  
 
 ::: {#Issues}
-C\) Inform your instructor the application is done by creating an Issue in the Github repostiory:
+C\) Inform your instructor the application is done by creating an ***Issue*** in the Github repository:
 :::
 
 1.  Click on ***Issues*** (top of page)
@@ -336,9 +324,9 @@ C\) Inform your instructor the application is done by creating an Issue in the G
 
 5.  Click ***Submit new issue***
 
-![Creating an Issue in GitHub](images/GitHubIssues.png "flexer=true"){#fig-GitHubIssue .fs grrr="true"}
+![Creating an Issue in GitHub](images/GitHubIssues.png "flexer=true"){#fig-GitHubIssue .fs alt="Creating an Issue in GitHub" grrr="true"}
 
-### Questions to answer
+### Questions to answer {data-link="Questions to answer"}
 
 Answer the following in comments inside your application script:
 
@@ -348,9 +336,9 @@ Answer the following in comments inside your application script:
 
 3.  What are some things you would like to know more about that is related to, but not covered in, this lesson?
 
-## Extension: Use Git Tab
+## Extension: Use Git Tab {data-link="Extension: Use Git Tab"}
 
-The ***Git*** tab can be used to sync changes from your Project Folder to your GitHub repository.
+The ***Git*** tab can be used instead of the Terminal to sync changes from your Project Folder to your GitHub repository.
 
 1.  In the ***Git*** tab, click ***Commit*** and the ***RStudio Review Changes*** window appears
 
@@ -366,4 +354,4 @@ The ***Git*** tab can be used to sync changes from your Project Folder to your G
 
 7.  Close the windows
 
-![Using the Git tab to sync with your Github repository](images/GH_UsingGitTab.png){#fig-usingGitTab .fs}
+![Using the Git tab to sync with your Github repository](images/GH_UsingGitTab.png){#fig-usingGitTab .fs alt="Using the Git tab to sync with your Github repository"}
