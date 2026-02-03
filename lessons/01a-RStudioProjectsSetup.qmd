@@ -6,6 +6,8 @@ short: "01a"
 
 ### To do
 
+-   GGPlot version... need to remove reference to GGPlot class if used in other classes.
+
 ## Purpose
 
 -   Install, setup, and test the software you will need for this class
