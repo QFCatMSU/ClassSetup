@@ -78,7 +78,7 @@ We will be using the ***Terminal*** tab in RStudio to setup Git and to connect y
 
 Most of the Terminal command used in this lesson will only work if you are in the correct RStudio Project. The RStudio Project name (in @fig-RStudioTermProj it is ***My_Project***) is in the upper-right corner of RStudio (circled in red).
 
-![RStudio Terminal tab (don't forget to check the Project Folder)](images/RStudioTerminalAndProject.png){#fig-RStudioTermProj .fs alt="RStudio Terminal tab (don't forget to check the Project Folder)"}
+![RStudio Terminal tab (don't forget to check the Project Folder)](images/RStudioTerminalAndProject.png){#fig-RStudioTermProj .fs}
 
 ## Configuring Git on your computer
 
@@ -102,7 +102,7 @@ The second command sets the user ***email*** in Git (replace ***email*** with th
 git config --global user.email "email"
 ```
 
-![Changing Git username and email using the Terminal tab](images/GH_EmailAndUsername.png){#fig-terminalTab .fs alt="Changing Git username and email using the Terminal tab"}
+![Changing Git username and email using the Terminal tab](images/GH_EmailAndUsername.png){#fig-terminalTab .fs}
 
 ### Viewing the configured values
 
@@ -146,7 +146,7 @@ Both RStudio Projects and Git Repositories are set up in your Project Folder (i.
 
 After you add Git to an RStudio Project folder, a ***Git*** tab will appear in the upper-right window. This tab is RStudio's built-in Git interface and it can handle many commonly performed Git functions, including most of the things needed for class. It is not necessary to use the ***Git*** tab for this class.
 
-![The Git tab has been added to the RStudio Project](images/GH_02_GitTab.png){#fig-GitTab .fs alt="The Git tab has been added to the RStudio Project"}
+![The Git tab has been added to the RStudio Project](images/GH_02_GitTab.png){#fig-GitTab .fs}
 
 ## Create a GitHub repository
 
@@ -165,13 +165,13 @@ To create a GitHub repository (@fig-GitURL)
     -   ***Private*** means that only users you add in ***Settings -\> Manage Access*** can view the repository
 5.  Click ***Create Repository***
 
-![Creating a new repository on GitHub](images/GH_CreateRepo.png){#fig-GitURL .fs alt="Creating a new repository on GitHub"}
+![Creating a new repository on GitHub](images/GH_CreateRepo.png){#fig-GitURL .fs}
 
 ### Get the GitHub URL
 
 To link the Git repository on your computer with this GitHub repository, you will need the URL for the GitHub repository. After you create the new repository, a window will appear ( @fig-GitHubURL) with the URL at the top in the ***Quick Setup*** section. [Copy this URL and save it]{.hl}-- you will use it in the next section.
 
-![The URL of your GitHub repository](images/GH_RepoUrl.png){#fig-GitHubURL .fs alt="The URL of your GitHub repository"}
+![The URL of your GitHub repository](images/GH_RepoUrl.png){#fig-GitHubURL .fs}
 
 The GitHub repository link is the URL that takes you directly to the online project.  A GitHub repository link is always in this format:
 
@@ -202,7 +202,7 @@ To invite a user (or, as GitHub calls them, ***collaborator***) to your reposito
 
     -   invite your instructor: ***belinsky\@msu.edu*** or ***belinskyc***
 
-![Inviting a user to your GitHub Repository](images/GH_AddUser.png){#fig-invite .fs alt="Inviting a user to your GitHub Repository"}
+![Inviting a user to your GitHub Repository](images/GH_AddUser.png){#fig-invite .fs}
 
 ## Linking your Git repository to a GitHub repository
 
@@ -264,7 +264,7 @@ You will repeat these lines every time you turn in an application.
 
 GitHub will ask for authentication [the first time you connect to a GitHub repository]{.hl} on a computer:
 
-![GitHub asking for authentication](images/GitHubLogin-new.png){#fig-GitHubAuth .fs alt="GitHub asking for authentication"}
+![GitHub asking for authentication](images/GitHubLogin-new.png){#fig-GitHubAuth .fs}
 
 When you click ***Sign in with your browser***, your default browser will open to the GitHub login page.
 
@@ -272,7 +272,7 @@ When you click ***Sign in with your browser***, your default browser will open t
 
 After you login you will get an Authentication Successful window:
 
-![The Authentication Successful window](images/GH_Repo_AuthSuccess.jpg){#fig-authSuccess .fs alt="The Authentication Successful window"}
+![The Authentication Successful window](images/GH_Repo_AuthSuccess.jpg){#fig-authSuccess .fs}
 
 ## Verifying the change on GitHub
 
@@ -290,7 +290,7 @@ Let's go to your GitHub account to verify that the project files are there (@fig
 
 You should notice that the files changed in the newest Commit have your Commit message attached (my Commit message: "A message about...") and the last commit for these files is recent (in this case: 9 minutes). 
 
-![GitHub after a new Commit was pushed](images/GH_First%20Push.png){#fig-GitHubPostCommit .fs alt="GitHub after a new Commit was pushed"}
+![GitHub after a new Commit was pushed](images/GH_First%20Push.png){#fig-GitHubPostCommit .fs}
 
 ## Application
 
@@ -324,7 +324,7 @@ C\) Inform your instructor the application is done by creating an ***Issue*** in
 
 5.  Click ***Submit new issue***
 
-![Creating an Issue in GitHub](images/GitHubIssues.png "flexer=true"){#fig-GitHubIssue .fs alt="Creating an Issue in GitHub" grrr="true"}
+![Creating an Issue in GitHub](images/GitHubIssues.png "flexer=true"){#fig-GitHubIssue .fs grrr="true"}
 
 ### Questions to answer {data-link="Questions to answer"}
 
@@ -354,4 +354,4 @@ The ***Git*** tab can be used instead of the Terminal to sync changes from your 
 
 7.  Close the windows
 
-![Using the Git tab to sync with your Github repository](images/GH_UsingGitTab.png){#fig-usingGitTab .fs alt="Using the Git tab to sync with your Github repository"}
+![Using the Git tab to sync with your Github repository](images/GH_UsingGitTab.png){#fig-usingGitTab .fs}
