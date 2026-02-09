@@ -416,5 +416,16 @@
       "<b>Graphing With GGPlot class</b>",
       "01b(alt): Git-only Setup"
     ]
+  },
+  {
+    "objectID": "lessons/01a-RStudioProjectsSetup.html",
+    "href": "lessons/01a-RStudioProjectsSetup.html",
+    "title": "01a: RStudio Projects Setup",
+    "section": "",
+    "text": "Stll just GGPlot version… need to remove reference to GGPlot class if used in other classes.",
+    "crumbs": [
+      "<b>Graphing With GGPlot class</b>",
+      "01a: RStudio Projects Setup"
+    ]
   }
 ]

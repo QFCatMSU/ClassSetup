@@ -16,5 +16,8 @@
   },
   "lessons/01b(alt)-GitOnlySetup.qmd": {
     "01b(alt)-GitOnlySetup.html": "c51b444e"
+  },
+  "01a-RStudioProjectsSetup.qmd": {
+    "01a-RStudioProjectsSetup.html": "7459c5dc"
   }
 }

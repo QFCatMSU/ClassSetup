@@ -6,7 +6,7 @@ short: "01a"
 
 ### To do
 
--   GGPlot version... need to remove reference to GGPlot class if used in other classes.
+-   Stll just GGPlot version... need to remove reference to GGPlot class if used in other classes.
 
 ## Purpose
 
